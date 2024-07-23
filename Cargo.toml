@@ -1,0 +1,25 @@
+# See: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "asimov-template-module"
+version = "0.0.0"
+authors = ["ASIMOV AI <support@asimov.so>"]
+edition = "2021"
+rust-version = "1.70"
+description = "ASIMOV Template Module"
+#documentation = "https://github.com/AsimovModules/asimov-template-module/blob/master/README.md"
+readme = true
+homepage = "https://github.com/AsimovModules"
+repository = "https://github.com/AsimovModules/asimov-template-module"
+license = "Unlicense"
+keywords = ["asimov", "ai"]
+categories = []
+publish = true
+
+[features]
+default = ["std"]
+std = ["asimov-sdk/std"]
+
+[dependencies]
+#asimov-sdk = "24"
+asimov-sdk = "24.0.0-dev.1"
