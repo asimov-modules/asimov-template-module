@@ -1,26 +1,21 @@
 // This is free and unencumbered software released into the public domain.
 
-use crate::prelude::{vec, Vec};
-use asimov_sdk::flow::{Block, InputPort, OutputPort, Port, PortDescriptor, Scheduler};
+use asimov_sdk::flow::derive::Block;
+use asimov_sdk::flow::{Block, BlockError, InputPort, OutputPort, Port, Scheduler};
 
 /// A block that computes the square of integer inputs.
+#[derive(Block)]
 pub struct Square {
     /// The input message stream.
+    #[input]
     input: InputPort<u64>,
     /// The output message stream.
+    #[output]
     output: OutputPort<u64>,
 }
 
 impl Block for Square {
-    fn inputs(&self) -> Vec<PortDescriptor> {
-        vec![PortDescriptor::from(&self.input)]
-    }
-
-    fn outputs(&self) -> Vec<PortDescriptor> {
-        vec![PortDescriptor::from(&self.output)]
-    }
-
-    fn execute(&mut self, _scheduler: &dyn Scheduler) -> Result<(), ()> {
+    fn execute(&mut self, _scheduler: &dyn Scheduler) -> Result<(), BlockError> {
         while let Some(input) = self.input.receive()? {
             if !self.output.is_connected() {
                 continue;

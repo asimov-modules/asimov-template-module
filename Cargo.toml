@@ -22,4 +22,5 @@ std = ["asimov-sdk/std"]
 
 [dependencies]
 #asimov-sdk = "24"
-asimov-sdk = "24.0.0-dev.1"
+asimov-sdk = "24.0.0-dev.3"
+protoflow = "0.0.6" # FIXME
