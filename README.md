@@ -1,7 +1,9 @@
-# ASIMOV Template Module
+# ASIMOV Module
 
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
 [![Compatibility](https://img.shields.io/badge/rust-1.70%2B-blue)](https://rust-lang.org)
+
+This is a template module for the ASIMOV Platform.
 
 ## 🛠️ Prerequisites
 
@@ -44,4 +46,3 @@ $ git clone https://github.com/AsimovModules/asimov-template-module.git
 [![Share on Reddit](https://img.shields.io/badge/share%20on-reddit-red?logo=reddit)](https://reddit.com/submit?url=https://github.com/AsimovModules/asimov-template-module&title=asimov-template-module)
 [![Share on Hacker News](https://img.shields.io/badge/share%20on-hacker%20news-orange?logo=ycombinator)](https://news.ycombinator.com/submitlink?u=https://github.com/AsimovModules/asimov-template-module&t=asimov-template-module)
 [![Share on Facebook](https://img.shields.io/badge/share%20on-facebook-1976D2?logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/AsimovModules/asimov-template-module)
-[![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/AsimovModules/asimov-template-module)

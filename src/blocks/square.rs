@@ -9,6 +9,7 @@ pub struct Square {
     /// The input message stream.
     #[input]
     input: InputPort<u64>,
+
     /// The output message stream.
     #[output]
     output: OutputPort<u64>,

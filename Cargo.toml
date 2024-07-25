@@ -6,8 +6,8 @@ version = "0.0.0"
 authors = ["ASIMOV AI <support@asimov.so>"]
 edition = "2021"
 rust-version = "1.70"
-description = "ASIMOV Template Module"
-#documentation = "https://github.com/AsimovModules/asimov-template-module/blob/master/README.md"
+description = "ASIMOV Platform module template. Fork this to create your own module!"
+#documentation = ""
 readme = true
 homepage = "https://github.com/AsimovModules"
 repository = "https://github.com/AsimovModules/asimov-template-module"
@@ -17,10 +17,12 @@ categories = []
 publish = true
 
 [features]
-default = ["std"]
-std = ["asimov-sdk/std"]
+default = ["std", "tracing"]
+std = ["asimov-sdk/std", "tracing?/std"]
+tracing = ["dep:tracing"]
 
 [dependencies]
 #asimov-sdk = "24"
-asimov-sdk = "24.0.0-dev.3"
-protoflow = "0.0.6" # FIXME
+asimov-sdk = { version = "24.0.0-dev.3", default-features = false }
+protoflow = { version = "0.0.6", default-features = false, features = ["derive"] }
+tracing = { version = "0.1", optional = true, default-features = false }
