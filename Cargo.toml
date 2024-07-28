@@ -23,6 +23,6 @@ tracing = ["dep:tracing"]
 
 [dependencies]
 #asimov-sdk = "24"
-asimov-sdk = { version = "24.0.0-dev.4", default-features = false }
-protoflow = { version = "0.0.8", default-features = false, features = ["derive"] }
+asimov-sdk = { version = "=24.0.0-dev.5", default-features = false }
+protoflow = { version = "=0.0.9", default-features = false, features = ["derive"] }
 tracing = { version = "0.1", optional = true, default-features = false }
