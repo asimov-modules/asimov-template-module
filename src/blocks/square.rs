@@ -8,16 +8,16 @@ use asimov_sdk::flow::{Block, BlockResult, BlockRuntime, InputPort, OutputPort, 
 pub struct Square {
     /// The input message stream.
     #[input]
-    pub input: InputPort<u64>,
+    pub input: InputPort<i64>,
 
     /// The output message stream.
     #[output]
-    pub output: OutputPort<u64>,
+    pub output: OutputPort<i64>,
 }
 
 impl Block for Square {
-    fn execute(&mut self, _runtime: &dyn BlockRuntime) -> BlockResult<()> {
-        while let Some(input) = self.input.receive()? {
+    fn execute(&mut self, _runtime: &dyn BlockRuntime) -> BlockResult {
+        while let Some(input) = self.input.recv()? {
             if !self.output.is_connected() {
                 continue;
             }

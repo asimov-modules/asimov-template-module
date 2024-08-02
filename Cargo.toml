@@ -19,10 +19,10 @@ publish = true
 [features]
 default = ["std", "tracing"]
 std = ["asimov-sdk/std", "tracing?/std"]
-tracing = ["dep:tracing"]
+tracing = ["dep:tracing", "asimov-sdk/tracing"]
 
 [dependencies]
 #asimov-sdk = "24"
-asimov-sdk = { version = "=24.0.0-dev.5", default-features = false }
-protoflow = { version = "=0.0.9", default-features = false, features = ["derive"] }
+asimov-sdk = { version = "=24.0.0-dev.6", default-features = false }
+protoflow = { version = "=0.0.10", default-features = false, features = ["derive"] }
 tracing = { version = "0.1", optional = true, default-features = false }
