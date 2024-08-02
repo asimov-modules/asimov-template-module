@@ -15,6 +15,12 @@ pub struct Square {
     pub output: OutputPort<i64>,
 }
 
+impl Square {
+    pub fn new(input: InputPort<i64>, output: OutputPort<i64>) -> Self {
+        Self { input, output }
+    }
+}
+
 impl Block for Square {
     fn execute(&mut self, _runtime: &dyn BlockRuntime) -> BlockResult {
         while let Some(input) = self.input.recv()? {
@@ -26,5 +32,19 @@ impl Block for Square {
             self.output.send(&output)?;
         }
         Ok(())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::Square;
+    use asimov_sdk::flow::{transports::MockTransport, System};
+
+    #[test]
+    fn instantiate_square_block() {
+        // Check that the block is constructible:
+        let _ = System::<MockTransport>::build(|s| {
+            let _ = s.block(Square::new(s.input(), s.output()));
+        });
     }
 }
