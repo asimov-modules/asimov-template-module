@@ -38,12 +38,12 @@ impl Block for Square {
 #[cfg(test)]
 mod tests {
     use super::Square;
-    use asimov_sdk::flow::{transports::MockTransport, System};
+    use asimov_sdk::flow::blocks::{System, SystemBuilding};
 
     #[test]
     fn instantiate_square_block() {
         // Check that the block is constructible:
-        let _ = System::<MockTransport>::build(|s| {
+        let _ = System::build(|s| {
             let _ = s.block(Square::new(s.input(), s.output()));
         });
     }
