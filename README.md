@@ -17,17 +17,17 @@ This is a template module for the ASIMOV Platform.
 
 #### Installation via Homebrew
 
-```console
-$ brew tap AsimovModules/tap
-$ brew install asimov-template-module
+```bash
+brew tap AsimovModules/tap
+brew install asimov-template-module
 ```
 
 ### Installation from Source Code
 
 #### Installation via Cargo
 
-```console
-$ cargo install asimov-template-module
+```bash
+cargo install asimov-template-module
 ```
 
 ## 👉 Examples
@@ -36,8 +36,8 @@ TBD
 
 ## 👨‍💻 Development
 
-```console
-$ git clone https://github.com/AsimovModules/asimov-template-module.git
+```bash
+git clone https://github.com/AsimovModules/asimov-template-module.git
 ```
 
 - - -

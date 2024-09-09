@@ -3,7 +3,7 @@
 [package]
 name = "asimov-template-module"
 version = "0.0.0"
-authors = ["ASIMOV AI <support@asimov.so>"]
+authors = ["ASIMOV by Haltia.AI <support@asimov.so>"]
 edition = "2021"
 rust-version = "1.70"
 description = "ASIMOV Platform module template. Fork this to create your own module!"
@@ -17,12 +17,13 @@ categories = []
 publish = true
 
 [features]
-default = ["std", "tracing"]
+default = ["all", "std"]
+all = ["tracing"]
 std = ["asimov-sdk/std", "tracing?/std"]
-tracing = ["dep:tracing", "asimov-sdk/tracing"]
+tracing = ["asimov-sdk/tracing", "dep:tracing"]
+unstable = []
 
 [dependencies]
-#asimov-sdk = "24"
 asimov-sdk = { version = "=24.0.0-dev.8", default-features = false }
 protoflow-core = { version = "=0.2.0", default-features = false }
-tracing = { version = "0.1", optional = true, default-features = false }
+tracing = { version = "0.1", default-features = false, optional = true }
