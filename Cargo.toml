@@ -24,6 +24,6 @@ tracing = ["asimov-sdk/tracing", "dep:tracing"]
 unstable = []
 
 [dependencies]
-asimov-sdk = { version = "=24.0.0-dev.19", default-features = false }
-protoflow-core = { version = "=0.3.1", default-features = false }
+asimov-sdk = { version = "=24.0.0-dev.20", default-features = false }
+protoflow-core = { version = "=0.4.0", default-features = false }
 tracing = { version = "0.1", default-features = false, optional = true }
