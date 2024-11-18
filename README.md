@@ -18,7 +18,7 @@ This is a template module for the ASIMOV Platform.
 #### Installation via Homebrew
 
 ```bash
-brew tap AsimovModules/tap
+brew tap asimov-modules/tap
 brew install asimov-template-module
 ```
 
@@ -37,12 +37,12 @@ TBD
 ## 👨‍💻 Development
 
 ```bash
-git clone https://github.com/AsimovModules/asimov-template-module.git
+git clone https://github.com/asimov-modules/asimov-template-module.git
 ```
 
 - - -
 
-[![Share on Twitter](https://img.shields.io/badge/share%20on-twitter-03A9F4?logo=twitter)](https://twitter.com/share?url=https://github.com/AsimovModules/asimov-template-module&text=asimov-template-module)
-[![Share on Reddit](https://img.shields.io/badge/share%20on-reddit-red?logo=reddit)](https://reddit.com/submit?url=https://github.com/AsimovModules/asimov-template-module&title=asimov-template-module)
-[![Share on Hacker News](https://img.shields.io/badge/share%20on-hacker%20news-orange?logo=ycombinator)](https://news.ycombinator.com/submitlink?u=https://github.com/AsimovModules/asimov-template-module&t=asimov-template-module)
-[![Share on Facebook](https://img.shields.io/badge/share%20on-facebook-1976D2?logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/AsimovModules/asimov-template-module)
+[![Share on Twitter](https://img.shields.io/badge/share%20on-twitter-03A9F4?logo=twitter)](https://twitter.com/share?url=https://github.com/asimov-modules/asimov-template-module&text=asimov-template-module)
+[![Share on Reddit](https://img.shields.io/badge/share%20on-reddit-red?logo=reddit)](https://reddit.com/submit?url=https://github.com/asimov-modules/asimov-template-module&title=asimov-template-module)
+[![Share on Hacker News](https://img.shields.io/badge/share%20on-hacker%20news-orange?logo=ycombinator)](https://news.ycombinator.com/submitlink?u=https://github.com/asimov-modules/asimov-template-module&t=asimov-template-module)
+[![Share on Facebook](https://img.shields.io/badge/share%20on-facebook-1976D2?logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/asimov-modules/asimov-template-module)
