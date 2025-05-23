@@ -17,13 +17,25 @@ categories = ["command-line-utilities", "text-processing"]              # TODO
 publish = false
 
 [features]
-default = ["all", "std"]
-all = []
-std = ["asimov-module/std"]
+default = ["all", "cli", "std"]
+all = ["tracing"]
+cli = ["std", "dep:tracing-subscriber"]
+std = [
+    "asimov-module/std",
+    "tracing?/std",
+    "tracing-subscriber?/fmt",
+    "tracing-subscriber?/std",
+]
+tracing = ["dep:tracing"]
 unstable = []
 
 [dependencies]
 asimov-module = { version = "25.0.0-dev.8", default-features = false }
+tracing = { version = "0.1", default-features = false, optional = true }
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+    "alloc",
+    "tracing-log",
+], optional = true }
 
 [profile.release]
 opt-level = "z"
@@ -33,3 +45,4 @@ lto = "thin"
 [[bin]]
 name = "asimov-template-emitter"
 path = "src/main.rs"
+required-features = ["cli"]
