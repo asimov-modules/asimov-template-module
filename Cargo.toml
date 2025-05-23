@@ -13,7 +13,7 @@ homepage = "https://github.com/asimov-modules"
 repository = "https://github.com/asimov-modules/asimov-template-module"
 license = "Unlicense"
 keywords = ["asimov-module", "asimov", "ai"]
-categories = ["command-line-utilities", "text-processing"]
+categories = ["command-line-utilities", "text-processing"]              # TODO
 publish = false
 
 [features]
@@ -23,7 +23,7 @@ std = ["asimov-module/std"]
 unstable = []
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.7", default-features = false }
+asimov-module = { version = "25.0.0-dev.8", default-features = false }
 
 [profile.release]
 opt-level = "z"
