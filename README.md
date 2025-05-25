@@ -20,8 +20,8 @@ cargo install asimov-template-module
 
 ## 👉 Examples
 
-```console
-$ asimov-template-emitter
+```bash
+asimov-template-emitter
 ```
 
 ## 👨‍💻 Development
