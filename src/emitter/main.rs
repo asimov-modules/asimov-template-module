@@ -2,7 +2,7 @@
 
 #[cfg(feature = "std")]
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // Configure tracing & logging:
+    // Configure logging & tracing:
     #[cfg(feature = "tracing")]
     tracing_subscriber::fmt()
         .with_writer(std::io::stderr)

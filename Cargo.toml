@@ -44,5 +44,5 @@ lto = "thin"
 
 [[bin]]
 name = "asimov-template-emitter"
-path = "src/main.rs"
+path = "src/emitter/main.rs"
 required-features = ["cli"]
