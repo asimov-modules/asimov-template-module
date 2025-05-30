@@ -19,23 +19,13 @@ publish = false
 [features]
 default = ["all", "cli", "std"]
 all = ["tracing"]
-cli = ["std", "dep:tracing-subscriber"]
-std = [
-    "asimov-module/std",
-    "tracing?/std",
-    "tracing-subscriber?/fmt",
-    "tracing-subscriber?/std",
-]
-tracing = ["dep:tracing"]
+cli = ["asimov-module/cli", "std"]
+std = ["asimov-module/std"]
+tracing = ["asimov-module/tracing"]
 unstable = []
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.8", default-features = false }
-tracing = { version = "0.1", default-features = false, optional = true }
-tracing-subscriber = { version = "0.3", default-features = false, features = [
-    "alloc",
-    "tracing-log",
-], optional = true }
+asimov-module = { version = "25.0.0-dev.9", default-features = false }
 
 [profile.release]
 opt-level = "z"
