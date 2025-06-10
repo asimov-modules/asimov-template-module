@@ -7,5 +7,13 @@ links:
   - https://github.com/asimov-modules/asimov-template-module
   - https://crates.io/crates/asimov-template-module
 
-flows:
-  - asimov-template-emitter
+provides:
+  flows:
+    - asimov-template-emitter
+
+handles:
+  url_protocols:
+  url_prefixes:
+  url_patterns:
+  file_extensions:
+  content_types:
