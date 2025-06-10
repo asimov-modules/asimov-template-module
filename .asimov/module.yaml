@@ -1,0 +1,11 @@
+# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+---
+name: template
+label: Template
+summary: Fork this to create your own module!
+links:
+  - https://github.com/asimov-modules/asimov-template-module
+  - https://crates.io/crates/asimov-template-module
+
+flows:
+  - asimov-template-emitter
