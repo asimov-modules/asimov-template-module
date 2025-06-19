@@ -1,4 +1,4 @@
-# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+# See: https://asimov-specs.github.io/module-manifest/
 ---
 name: template
 label: Template
