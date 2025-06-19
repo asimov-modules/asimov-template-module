@@ -8,7 +8,7 @@ links:
   - https://crates.io/crates/asimov-template-module
 
 provides:
-  flows:
+  programs:
     - asimov-template-emitter
 
 handles:
