@@ -25,7 +25,7 @@ tracing = ["asimov-module/tracing"]
 unstable = []
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.9", default-features = false }
+asimov-module = { version = "25.0.0-dev.12", default-features = false }
 
 [profile.release]
 opt-level = "z"
