@@ -2,6 +2,7 @@
 ---
 name: template
 label: Template
+title: ASIMOV Template Module
 summary: Fork this to create your own module!
 links:
   - https://github.com/asimov-modules/asimov-template-module

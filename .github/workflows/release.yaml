@@ -86,7 +86,6 @@ jobs:
 
   update-scoop-bucket:
     name: Update Scoop bucket
-    if: startsWith(github.ref, 'refs/tags/')
     needs: release
     uses: asimov-modules/.github/.github/workflows/update-scoop-bucket.yaml@master
     with:
