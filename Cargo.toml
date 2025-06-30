@@ -19,13 +19,20 @@ publish = false
 [features]
 default = ["all", "cli", "std"]
 all = ["tracing"]
-cli = ["asimov-module/cli", "std"]
+cli = ["asimov-module/cli", "std", "dep:clap", "dep:clientele"]
 std = ["asimov-module/std"]
-tracing = ["asimov-module/tracing"]
+tracing = ["asimov-module/tracing", "clientele?/tracing"]
 unstable = []
 
 [dependencies]
 asimov-module = { version = "25.0.0-dev.12", default-features = false }
+clap = { version = "4.5", default-features = false, features = [
+    "std",
+], optional = true }
+clientele = { version = "0.3.7", default-features = false, features = [
+    "clap",
+    "std",
+], optional = true }
 
 [profile.release]
 opt-level = "z"

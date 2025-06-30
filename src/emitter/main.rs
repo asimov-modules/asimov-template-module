@@ -1,28 +1,55 @@
 // This is free and unencumbered software released into the public domain.
 
-#[cfg(feature = "std")]
-fn main() -> Result<asimov_module::SysexitsError, Box<dyn std::error::Error>> {
-    use asimov_module::SysexitsError::*;
+#[cfg(not(feature = "std"))]
+compile_error!("asimov-template-emitter requires the 'std' feature");
 
+use asimov_module::SysexitsError::{self, *};
+use clap::Parser;
+use clientele::StandardOptions;
+use std::error::Error;
+
+/// asimov-template-emitter
+#[derive(Debug, Parser)]
+#[command(arg_required_else_help = true)]
+struct Options {
+    #[clap(flatten)]
+    flags: StandardOptions,
+}
+
+fn main() -> Result<SysexitsError, Box<dyn Error>> {
     // Load environment variables from `.env`:
     asimov_module::dotenv().ok();
 
     // Expand wildcards and @argfiles:
-    let _args = asimov_module::args_os()?;
+    let args = asimov_module::args_os()?;
+
+    // Parse command-line options:
+    let options = Options::parse_from(args);
+
+    // Handle the `--version` flag:
+    if options.flags.version {
+        println!("{} {}", env!("CARGO_PKG_NAME"), env!("CARGO_PKG_VERSION"));
+        return Ok(EX_OK);
+    }
+
+    // Handle the `--license` flag:
+    if options.flags.license {
+        print!("{}", include_str!("../../UNLICENSE"));
+        return Ok(EX_OK);
+    }
 
     // Configure logging & tracing:
     #[cfg(feature = "tracing")]
     asimov_module::tracing_subscriber::fmt()
         .with_writer(std::io::stderr)
-        .with_max_level(asimov_module::tracing_subscriber::filter::LevelFilter::WARN)
+        .with_max_level(&options.flags)
+        .with_level(options.flags.debug || options.flags.verbose > 0)
+        .with_target(options.flags.debug)
+        .with_file(false)
+        .without_time()
         .init();
 
-    println!("asimov-template-emitter"); // TODO
+    println!("asimov-template-emitter output"); // TODO
 
     Ok(EX_UNAVAILABLE)
-}
-
-#[cfg(not(feature = "std"))]
-fn main() {
-    unimplemented!("asimov-template-emitter requires the 'std' feature")
 }
