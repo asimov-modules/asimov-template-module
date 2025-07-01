@@ -40,14 +40,7 @@ fn main() -> Result<SysexitsError, Box<dyn Error>> {
 
     // Configure logging & tracing:
     #[cfg(feature = "tracing")]
-    asimov_module::tracing_subscriber::fmt()
-        .with_writer(std::io::stderr)
-        .with_max_level(&options.flags)
-        .with_level(options.flags.debug || options.flags.verbose > 0)
-        .with_target(options.flags.debug)
-        .with_file(false)
-        .without_time()
-        .init();
+    asimov_module::init_tracing_subscriber(&options.flags).expect("failed to initialize logging");
 
     println!("asimov-template-emitter output"); // TODO
 

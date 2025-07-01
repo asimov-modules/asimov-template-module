@@ -26,9 +26,9 @@ dependencies = [
 
 [[package]]
 name = "asimov-module"
-version = "25.0.0-dev.12"
+version = "25.0.0-dev.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72711c55ee5f04032124731cf2949b5cf0c86a47ae709ef45b776ba651c01e76"
+checksum = "e7ac8b71da155cde753c1c253d123483dc1a89e1e08400c53b0fc51f40c9a067"
 dependencies = [
  "clientele",
  "dogma",
@@ -110,9 +110,9 @@ checksum = "f46ad14479a25103f283c0f10005961cf086d8dc42205bb44c46ac563475dca6"
 
 [[package]]
 name = "clientele"
-version = "0.3.7"
+version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "913c7656cb7d4e83b7a6fa82df487dd9ec755d02f5e964a761eb8dbde77786f2"
+checksum = "07ab70eb434a01fc8bc1787981828ccf36f1e80a1242b915e085e913b4290e66"
 dependencies = [
  "argfile",
  "clap",
@@ -145,9 +145,9 @@ dependencies = [
 
 [[package]]
 name = "dogma"
-version = "0.1.8"
+version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e840aa7280133a6c909a6c1d5f308ec01a31ca728c48f12aeec315f17fa28b8a"
+checksum = "b4329b663bcb56cab24a624e8eb2032805e999c3724cd570e3ba1aef5a9d7bb8"
 dependencies = [
  "iri-string",
  "known-schemes",
@@ -215,9 +215,9 @@ checksum = "a8d1add55171497b4705a648c6b583acafb01d58050a51727785f0b2c8e0a2b2"
 
 [[package]]
 name = "gofer"
-version = "0.1.4"
+version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "331f3f8019984414d11a8571c5553283eacd716d97a7963fdc35997b5c625fda"
+checksum = "fd6761a81efac6a3b56c289383c0e94539ee8ad7441feb682436778019a5bfb0"
 dependencies = [
  "clap",
  "data-url",
@@ -357,9 +357,9 @@ checksum = "5046ff2073c83a9b05fee82dd1dcfe91b0eafc4cd872cdf398fa8a0efba77c2c"
 
 [[package]]
 name = "known-schemes"
-version = "0.1.0"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51095fa5fadee753dca603305250a8de782448bb86c346ddf28d5352aec4b855"
+checksum = "2474d01704cbcb2ed17c7cc1106b950775b9979d983c9b129adbe830cb317c2c"
 
 [[package]]
 name = "lazy_static"

@@ -25,7 +25,7 @@ tracing = ["asimov-module/tracing", "clientele?/tracing"]
 unstable = []
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.12", default-features = false }
+asimov-module = { version = "25.0.0-dev.13", default-features = false }
 clap = { version = "4.5", default-features = false, features = [
     "std",
 ], optional = true }
