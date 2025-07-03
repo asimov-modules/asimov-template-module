@@ -2,10 +2,14 @@
 
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
 [![Compatibility](https://img.shields.io/badge/rust-1.85%2B-blue)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/)
-[![Package](https://img.shields.io/crates/v/asimov-template-module)](https://crates.io/crates/asimov-template-module)
+[![Package on Crates.io](https://img.shields.io/crates/v/asimov-template-module)](https://crates.io/crates/asimov-template-module)
 [![Documentation](https://docs.rs/asimov-template-module/badge.svg)](https://docs.rs/asimov-template-module)
 
 [ASIMOV] module template. Fork this to create your own module!
+
+## ✨ Features
+
+- To be determined!
 
 ## 🛠️ Prerequisites
 
@@ -40,3 +44,6 @@ git clone https://github.com/asimov-modules/asimov-template-module.git
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/asimov-modules/asimov-template-module)
 
 [ASIMOV]: https://asimov.sh
+[JSON-LD]: https://json-ld.org
+[KNOW]: https://know.dev
+[RDF]: https://www.w3.org/TR/rdf12-primer/
