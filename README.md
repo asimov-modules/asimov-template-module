@@ -13,9 +13,15 @@
 
 ## 🛠️ Prerequisites
 
-- [Rust](https://rust-lang.org) 1.85+ (2024 edition)
+- [Rust] 1.85+ (2024 edition) if building from source code
 
 ## ⬇️ Installation
+
+### Installation with the [ASIMOV CLI]
+
+```bash
+asimov module install template -v
+```
 
 ### Installation from Source Code
 
@@ -27,6 +33,27 @@ cargo install asimov-template-module
 
 ```bash
 asimov-template-emitter
+```
+
+## ⚙ Configuration
+
+This module requires no configuration.
+
+## 📚 Reference
+
+### `asimov-template-emitter`
+
+```
+asimov-template-emitter
+
+Usage: asimov-template-emitter [OPTIONS]
+
+Options:
+  -d, --debug       Enable debugging output
+      --license     Show license information
+  -v, --verbose...  Enable verbose output (may be repeated for more verbosity)
+  -V, --version     Print version information
+  -h, --help        Print help
 ```
 
 ## 👨‍💻 Development
@@ -44,6 +71,8 @@ git clone https://github.com/asimov-modules/asimov-template-module.git
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/asimov-modules/asimov-template-module)
 
 [ASIMOV]: https://asimov.sh
+[ASIMOV CLI]: https://cli.asimov.sh
 [JSON-LD]: https://json-ld.org
 [KNOW]: https://know.dev
 [RDF]: https://www.w3.org/TR/rdf12-primer/
+[Rust]: https://rust-lang.org
