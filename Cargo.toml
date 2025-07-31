@@ -18,14 +18,19 @@ publish = false
 
 [features]
 default = ["all", "cli", "std"]
-all = ["tracing"]
+all = ["pretty", "tracing"]
 cli = ["asimov-module/cli", "std", "dep:clap", "dep:clientele"]
-std = ["asimov-module/std"]
-tracing = ["asimov-module/tracing", "clientele?/tracing"]
+std = ["asimov-module/std", "clap?/std", "clientele?/std"]
 unstable = []
 
+# Optional features:
+pretty = []
+tracing = ["asimov-module/tracing", "clientele?/tracing"]
+
 [dependencies]
-asimov-module = { version = "25.0.0-dev.13", default-features = false }
+asimov-module = { version = "25.0.0-dev.19", default-features = false }
+
+# Optional integrations:
 clap = { version = "4.5", default-features = false, features = [
     "std",
 ], optional = true }

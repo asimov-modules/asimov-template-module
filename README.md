@@ -1,7 +1,6 @@
 # ASIMOV Template Module
 
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Compatibility](https://img.shields.io/badge/rust-1.85%2B-blue)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/)
 [![Package on Crates.io](https://img.shields.io/crates/v/asimov-template-module)](https://crates.io/crates/asimov-template-module)
 [![Documentation](https://docs.rs/asimov-template-module/badge.svg)](https://docs.rs/asimov-template-module)
 
@@ -40,6 +39,10 @@ asimov-template-emitter
 This module requires no configuration.
 
 ## 📚 Reference
+
+### Installed Binaries
+
+- `asimov-template-emitter`
 
 ### `asimov-template-emitter`
 
