@@ -28,15 +28,15 @@ pretty = []
 tracing = ["asimov-module/tracing", "clientele?/tracing"]
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.19", default-features = false }
+asimov-module = { version = "25.0.0-dev.21", default-features = false }
 
 # Optional integrations:
 clap = { version = "4.5", default-features = false, features = [
-    "std",
+  "std",
 ], optional = true }
 clientele = { version = "0.3.8", default-features = false, features = [
-    "clap",
-    "std",
+  "clap",
+  "std",
 ], optional = true }
 
 [profile.release]
