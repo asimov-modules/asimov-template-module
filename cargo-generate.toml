@@ -1,0 +1,15 @@
+[template]
+cargo_generate_version = ">=0.23.0"
+ignore = ["target", ".idea", "Cargo.lock"]
+
+[placeholders]
+package_name = { type = "string", prompt = "Cargo package name", default = "asimov-template-module", regex = "^asimov-[a-z0-9-]+-module$" }
+package_description = { type = "string", prompt = "Cargo package description", default = "ASIMOV module." }
+package_authors = { type = "string", prompt = "Cargo package authors", default = "ASIMOV Community" }
+module_name = { type = "string", prompt = "ASIMOV module name", default = "template", regex = "^[a-z0-9][a-z0-9-]*$" }
+module_label = { type = "string", prompt = "ASIMOV module label", default = "Template" }
+module_title = { type = "string", prompt = "ASIMOV module title", default = "ASIMOV Template Module" }
+module_summary = { type = "string", prompt = "ASIMOV module summary", default = "Fork this to create your own module!" }
+program_name = { type = "string", prompt = "Primary program name", default = "asimov-template-emitter", regex = "^asimov-[a-z0-9-]+-[a-z0-9-]+$" }
+repository_url = { type = "string", prompt = "Repository URL", default = "https://github.com/asimov-modules/asimov-template-module" }
+publish = { type = "bool", prompt = "Publish this crate?", default = false }

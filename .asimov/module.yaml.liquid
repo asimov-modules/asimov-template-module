@@ -1,0 +1,20 @@
+# See: https://asimov-specs.github.io/module-manifest/
+---
+name: {{ module_name }}
+label: {{ module_label }}
+title: {{ module_title }}
+summary: {{ module_summary }}
+links:
+  - {{ repository_url }}
+  - https://crates.io/crates/{{ package_name }}
+
+provides:
+  programs:
+    - {{ program_name }}
+
+handles:
+  url_protocols:
+  url_prefixes:
+  url_patterns:
+  file_extensions:
+  content_types:

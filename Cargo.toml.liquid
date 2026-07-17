@@ -1,0 +1,55 @@
+# See: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "{{ package_name }}"
+version = "0.0.0"
+authors = ["{{ package_authors }}"]
+edition = "2024"
+#rust-version = "1.85"
+description = "{{ package_description }}"
+#documentation = "https://docs.rs/{{ package_name }}"
+readme = true
+homepage = "https://github.com/asimov-modules"
+repository = "{{ repository_url }}"
+license = "Unlicense"
+keywords = ["asimov-module", "asimov", "ai"]
+categories = ["command-line-utilities", "text-processing"]              # TODO
+publish = {{ publish }}
+
+[package.metadata.readmer.project]
+name = "{{ module_title }}"
+title = "{{ module_title }}"
+summary = "{{ module_summary }}"
+
+[features]
+default = ["all", "cli", "std"]
+all = ["pretty", "tracing"]
+cli = ["asimov-module/cli", "std", "dep:clap", "dep:clientele"]
+std = ["asimov-module/std", "clap?/std", "clientele?/std"]
+unstable = []
+
+# Optional features:
+pretty = []
+tracing = ["asimov-module/tracing", "clientele?/tracing"]
+
+[dependencies]
+asimov-module = { version = "25.0.0-dev.21", default-features = false }
+
+# Optional integrations:
+clap = { version = "4.5", default-features = false, features = [
+  "std",
+], optional = true }
+clientele = { version = "0.3.8", default-features = false, features = [
+  "clap",
+  "std",
+], optional = true }
+
+[profile.release]
+opt-level = "z"
+strip = true
+lto = "thin"
+
+[[bin]]
+name = "{{ program_name }}"
+path = "src/emitter/main.rs"
+required-features = ["cli"]
