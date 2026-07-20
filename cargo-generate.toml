@@ -12,4 +12,5 @@ module_title = { type = "string", prompt = "ASIMOV module title", default = "ASI
 module_summary = { type = "string", prompt = "ASIMOV module summary", default = "Fork this to create your own module!" }
 program_name = { type = "string", prompt = "Primary program name", default = "asimov-template-emitter", regex = "^asimov-[a-z0-9-]+-[a-z0-9-]+$" }
 repository_url = { type = "string", prompt = "Repository URL", default = "https://github.com/asimov-modules/asimov-template-module" }
+asimov_version = { type = "string", prompt = "`asimov-module` dependency version", default = "25.0.0-dev.21" }
 publish = { type = "bool", prompt = "Publish this crate?", default = false }
