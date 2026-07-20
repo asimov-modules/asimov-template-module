@@ -15,3 +15,4 @@ program_kind = { type = "string", prompt = "Primary program kind (used as its so
 repository_url = { type = "string", prompt = "Repository URL", default = "https://github.com/asimov-modules/asimov-template-module" }
 asimov_version = { type = "string", prompt = "`asimov-module` dependency version", default = "25.0.0-dev.21" }
 publish = { type = "bool", prompt = "Publish this crate?", default = false }
+create_program = { type = "string", prompt = "Scaffold an initial program?", default = "true" }
