@@ -48,10 +48,3 @@ clientele = { version = "0.3.8", default-features = false, features = [
 opt-level = "z"
 strip = true
 lto = "thin"
-
-{%- if create_program == "true" %}
-[[bin]]
-name = "{{ program_name }}"
-path = "src/{{program_kind}}/main.rs"
-required-features = ["cli"]
-{%- endif %}

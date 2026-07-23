@@ -1,6 +1,6 @@
 [template]
 cargo_generate_version = ">=0.23.0"
-ignore = ["target", ".idea", "Cargo.lock", "src/emitter/main.rs"]
+ignore = ["target", ".idea", "Cargo.lock", "src/emitter/main.rs", ".template"]
 
 [placeholders]
 package_name = { type = "string", prompt = "Cargo package name", default = "asimov-template-module", regex = "^asimov-[a-z0-9-]+-module$" }
@@ -10,9 +10,6 @@ module_name = { type = "string", prompt = "ASIMOV module name", default = "templ
 module_label = { type = "string", prompt = "ASIMOV module label", default = "Template" }
 module_title = { type = "string", prompt = "ASIMOV module title", default = "ASIMOV Template Module" }
 module_summary = { type = "string", prompt = "ASIMOV module summary", default = "Fork this to create your own module!" }
-program_name = { type = "string", prompt = "Primary program name", default = "asimov-template-emitter", regex = "^asimov-[a-z0-9-]+-[a-z0-9-]+$" }
-program_kind = { type = "string", prompt = "Primary program kind (used as its source directory name)", default = "emitter", regex = "^[a-z0-9][a-z0-9-]*$" }
 repository_url = { type = "string", prompt = "Repository URL", default = "https://github.com/asimov-modules/asimov-template-module" }
 asimov_version = { type = "string", prompt = "`asimov-module` dependency version", default = "25.0.0-dev.21" }
 publish = { type = "bool", prompt = "Publish this crate?", default = false }
-create_program = { type = "string", prompt = "Scaffold an initial program?", default = "true" }
