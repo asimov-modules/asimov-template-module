@@ -1,6 +1,6 @@
 [template]
 cargo_generate_version = ">=0.23.0"
-ignore = ["target", ".idea", "Cargo.lock", "src/emitter/main.rs", ".template"]
+ignore = ["target", ".idea", "Cargo.lock", "src/emitter", ".template"]
 
 [placeholders]
 package_name = { type = "string", prompt = "Cargo package name", default = "asimov-template-module", regex = "^asimov-[a-z0-9-]+-module$" }
