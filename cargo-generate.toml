@@ -9,7 +9,7 @@ package_authors = { type = "string", prompt = "Cargo package authors", default =
 module_name = { type = "string", prompt = "ASIMOV module name", default = "template", regex = "^[a-z0-9][a-z0-9-]*$" }
 module_label = { type = "string", prompt = "ASIMOV module label", default = "Template" }
 module_title = { type = "string", prompt = "ASIMOV module title", default = "ASIMOV Template Module" }
-module_summary = { type = "string", prompt = "ASIMOV module summary", default = "Fork this to create your own module!" }
+module_summary = { type = "string", prompt = "ASIMOV module summary", default = "ASIMOV module." }
 repository_url = { type = "string", prompt = "Repository URL", default = "https://github.com/asimov-modules/asimov-template-module" }
 asimov_version = { type = "string", prompt = "`asimov-module` dependency version", default = "25.0.0-dev.21" }
 publish = { type = "bool", prompt = "Publish this crate?", default = false }
